@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+
+<title>旅游地图</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7, IE=9">
+
+<link rel="stylesheet" type="text/css" href="skins/tango/skin.css" />
+<link rel="stylesheet" type="text/css" href="http://tm.arcgisonline.cn:8038/App1/arcgis_js_v32_api/arcgis_js_api/library/3.2/jsapi/js/esri/dijit/css/Popup.css">
+<link rel="stylesheet" type="text/css" href="http://tm.arcgisonline.cn:8038/App1/arcgis_js_v32_api/arcgis_js_api/library/3.2/jsapi/js/dojo/dijit/themes/claro/claro.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script type="text/javascript" src="lib/config.js"></script>
+<script type="text/javascript" src="lib/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="lib/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="lib/ie8_compatibility.js"></script>
+<script type="text/javascript" src="lib/CrossFader.js"></script>
+<script type="text/javascript" src="lib/common/EventTarget.js"></script>
+<script type="text/javascript" src="lib/LocationsService.js"></script>
+<script type="text/javascript" src="lib/common/helper_functions.js"></script>
+<script type="text/javascript" src="http://tm.arcgisonline.cn:8038/arcgis_js_v27/library/2.7/jsapicompact/"></script>
+
+<script type="text/javascript">var djConfig = {parseOnLoad: true};</script>
+
+<script type="text/javascript" src="lib/main.js"></script>
+
+
+</head>
+
+<body class="claro">
+    
+    <!-- Header Section-->
+    <div id="header" >
+      <div id="headerText">
+	    <h1 id="title"></h1>
+	    <h2 id="subtitle"></h2>
+      </div>
+      <div id="logoArea">
+        <div id="social"><a id="msLink" href="http://storymaps.arcgisonline.cn" target="_blank">地图故事</a>
+        	<a class="shareto_button" href="http://shareto.com.cn/share.html">
+        		<img src="http://s.shareto.com.cn/btn/lg-share-cn.gif" width="125" height="21" alt="分享" style="border:0"/>
+        	</a>
+        </div>
+        <div id="logo"><a id="logoLink" href="http://www.esrichina.com.cn" target="_blank"><img id="logoImg" src="images/esriGlobeLogow.png" alt="Esri - Home"></a></div>
+      </div>
+    </div>
+    
+    <div id="middle">
+    
+        <div id="left">
+        	<img id="arrowPrev" src="images/picture_left_disabled.png"/>
+        	<div id="frame">
+                <div id="cfader"></div>
+                <div id="placardContainer">
+                	<div id="toggle">▼</div>
+	                <div id="placard"></div>
+                </div>
+            </div>
+        	<img id="arrowNext" src="images/picture_right.png"/>        
+        </div>
+        
+        <div id="right" dojotype="dijit.layout.BorderContainer" design="headline" gutters="false">
+            <div id="sizer"></div>
+            <div id="map" dojotype="dijit.layout.ContentPane" region="center" >
+	            <div id="hoverInfo"></div>
+            </div>
+        </div>            
+        
+    </div>  
+    
+    <div id="bottom">
+    	<center>
+		  <!--legacy IE's require explicit end tags for UL -->
+	      <ul id="mycarousel" class="jcarousel-skin-tango">
+	     </ul>
+        </center>
+    </div>
+    
+</body>
+<script type="text/javascript" src="http://s.shareto.com.cn/js/shareto_button.js" charset="utf-8"></script>
+</html>
